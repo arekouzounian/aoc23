@@ -1,4 +1,7 @@
+!.gitignore 
 .vscode/
 */.bash_history
 .bash_history
 .*/
+.*
+*.out 
