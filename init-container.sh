@@ -1,0 +1,1 @@
+apt update && apt install gdb g++ gcc make

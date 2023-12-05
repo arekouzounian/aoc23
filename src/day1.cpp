@@ -38,7 +38,7 @@ char to_digit(const char& c)
 
 int main() 
 {
-    const std::string FILE = "../inputs/day1.txt";
+    const std::string FILE = "../inputs/test1.txt";
     int result = read_input(FILE);
 
 
@@ -125,7 +125,8 @@ int main()
         }
 
         // std::cout << f << ' ' << l << std::endl; 
-        sum += (conv[f] * 10) + (conv[l]); 
+        sum += (conv[f] * 10) + (conv[l]);
+
     }
     
 
