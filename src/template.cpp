@@ -25,10 +25,8 @@ int read_input(std::string filename)
 
 int main() 
 {
-    std::string in; 
-    std::cout << "Enter filename: "; 
-    std::cin >> in; 
-    int result = read_input(in);
+    const std::string FILE = "/path/to/file.txt";
+    int result = read_input(FILE);
 
     if (result != 0) 
     {
