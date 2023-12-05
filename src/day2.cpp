@@ -6,7 +6,7 @@
 #include <string> 
 
 std::vector<std::string> input_lines; 
-#define PART1 
+#define PART2
 
 int read_input(std::string filename)
 {
@@ -56,8 +56,8 @@ int main()
     }
 
     #ifdef PART1
-
-    const unsigned int RED = 12, GREEN = 13, BLUE = 14; 
+    const unsigned int RED = 12, GREEN = 13, BLUE = 14;
+    #endif 
     unsigned int sum = 0; 
 
     // triple for loop !? I hate text. 
@@ -99,16 +99,20 @@ int main()
             }
         }
 
+        #ifdef PART1
         // std::cout << red_max << '|' << green_max << '|' << blue_max << std::endl; 
         if (red_max <= RED && green_max <= GREEN && blue_max <= BLUE)
         {
             sum += id; 
         }
+        #endif 
+
+        #ifdef PART2 
+        sum += (red_max * green_max * blue_max); 
+        #endif
     }
 
     std::cout << sum << std::endl; 
-
-    #endif
 
     return 0; 
 }
