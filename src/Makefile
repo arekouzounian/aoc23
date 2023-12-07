@@ -6,7 +6,7 @@ day1: day1.cpp
 day2: day2.cpp
 	gcc -g $^ -o $@.out -lstdc++
 
-day3: day3.cpp
+day3: day3-2.cpp
 	gcc -g $^ -o $@.out -lstdc++
 
 clean: 
