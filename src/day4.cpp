@@ -18,6 +18,9 @@ int main()
 
     unsigned int sum = 0; 
 
+    std::vector<int> copies(input_lines.size(), 1);
+    int ind = 0; 
+
     std::vector<std::string>::iterator it; 
     for (it = input_lines.begin(); it != input_lines.end(); ++it)
     {
@@ -37,7 +40,7 @@ int main()
         }
         
 
-        int curr = 0; 
+        int number_of_wins = 0; 
         for (int i = 0; i < scratched_vec.size(); ++i)
         {
             // std::cout << scratched_vec[i] << std::endl; 
@@ -46,13 +49,20 @@ int main()
             int conv = std::stoi(scratched_vec[i]); 
             if (winning_nums.find(conv) != winning_nums.end())
             {
-                curr <<= 1; 
-                curr = curr == 0 ? 1 : curr; 
+                ++number_of_wins; 
             }
         }
 
-        sum += curr; 
-    
+        for (int j = 0; j < copies[ind]; ++j)
+        {
+            for (int i = ind+1; i < ind + number_of_wins+1; ++i)
+            {
+                copies[i] += 1; 
+            }
+        }
+
+        sum += copies[ind]; 
+        ++ind; 
     }
 
     std::cout << sum << std::endl; 
